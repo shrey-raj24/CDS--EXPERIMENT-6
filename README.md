@@ -1,4 +1,4 @@
-   Experiment-6<<br>>
+   Experiment-6<br>
 Aim -
 To study and implement C++ decision making statement loops
 
