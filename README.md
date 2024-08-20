@@ -1,197 +1,199 @@
-   Experiment-6<br>
-Aim -
-To study and implement C++ decision making statement loops
+# Experiment---6
 
-Theory -
-Loops are used to make the program less repetitive and compact ny iterating a part of a program several times .Thus,they are also called repetitive control structures.
+### Aim 
+To study and implement C++ deciision making statements loops.<br> 
 
-Types of loops:-
+### Software 
+Visual Studio Code<br> 
 
-a) For Loop
+### Theory 
+(1) For loop - It allows us to repeat a set of instructions for a specific number of time.  <br> 
+              Syntax: <br> 
+              for ( initialization; test condition; updation) <rb> 
+              { <br> 
+              // body of for loop <br> 
+              } <br> 
+          (2) While loop - It is used in situations where we do not know the exact number of iterations of the loop beforehand. <br> 
+              Syntax: <br> 
+              while (test_expression) <br>
+              { <br> 
+              // statements <br> 
+               update_expression; <br> 
+              } <br> 
+          (3) Do while loop - It is same as the while loop but tha difference is that in the do-while loop the condition is tested at the end of the loop body. 
+          
+         
+             Syntax:
+              do
+              { 
+              // loop body
+              update_expression;  
+              } 
+              while (test_expression); 
+### Code:<br> 
 
-b) While/Do-While Loop
-
-A) For Loop -
-A "for" loop is a control flow statement used to repeat a block of code a certain number of times.
-
-The syntax can vary slightly depending on the programming language.
-
-B) While loop:-
-A "while" loop is another type of control flow statement that repeatedly executes a block of code as long as a specified condition is true.
-
-You can control the flow inside a "while" loop using break to exit the loop and continue to skip to the next iteration:
-
-C) Do-while loop:-
-It executes the block of code at least once before checking the condition. Python does not have a built-in "do-while" loop, but you can simulate it.
-
-You can control the flow inside a "while" loop using break to exit the loop and continue to skip to the next iteration:
-
-Nested loops:-
-Nested loops involve placing one loop inside another. They can be useful for handling multi-dimensional data or performing complex iterations.
-
-Nested loops can be quite powerful but can also lead to performance issues if not used carefully, especially with large datasets or high iteration counts.
-
-Code:-
-1. For loop
-//subham
-//23070123132
-//entc B2
-//experiment 6
+(A) <br> 
+```
 #include<iostream>
 using namespace std;
+int main(){
+    int i;
+    for (i=0;i<10;i++) {
+    cout<<"HELLO WORLD("<<i+1<<")"<<"\n";
+    }
+    return 0;
+}
+```
+
+(B)<br>
+```
+#include<iostream>
+using namespace std;
+
 int main()
 {
     int i;
-    for(i=0;i<10;i++)
+    cout<<"Enter a number: "<<"\n";
+    cin>>i;
+    while(i<=10)
     {
-        cout<<"heloo world("<<i+1<<")"<<endl;
+        cout<<" "<<"\n"<<i++;
+    
     }
+    return 0;
 }
-2. while loop
-//subham
-//23070123132
-//entc B2
-//experiment 6
-#include<iostream>
+```
+
+(C)<br>
+```
+#include<iostream> 
 using namespace std;
+
 int main() 
 {
-    int input = 1;
-    while (input <= 15) {
-        std::cout << "\n" << input;
-        input++;
-    }
-}
-3. Do-while
-//subham
-//23070123132
-//entc B2
-//experiment 6
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    int number = 1;
+    int a=0;
     do {
-        cout << number << endl;
-        number++;
-    } while (number <= 10);
-    return 0;
-}
-4. Nested for loop
-//subham
-//23070123132
-//entc B2
-//experiment 6
-#include<iostream>
-using namespace std;
-int main() {
-    for (int i = 1; i <= 1; i++) {
-        for (int j = 1; j <= 10; j++) {
-            std::cout << j << " ";
-        }
+        cout<< a << "\n";
+        a=a+2;
     }
-    std::cout << std::endl;
-    return 0;
+    while (a<=50); 
+    return 0; 
 }
-5. Nested while
-//subham
-//23070123132
-//entc B2
-//experiment 6
+```
+
+(D)<br>
+```
 #include<iostream>
 using namespace std;
+
 int main()
 {
-    int i = 1;
-    while (i <= 10) {
-        int j = 1;
-        while (j <= i) {
-            std::cout << j << " ";
-            j++;
+    int a[3][3],s=0,i,j;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<"Enter any number for index number: "<<i<<j;
+            cin>>a[i][j];
+            s=s+a[i][j];
         }
-        std::cout << std::endl;
-        i++;
     }
+    cout<<"The sum of elements of matrix is:"<<s;
     return 0;
 }
-7. Nested do while
-//subham
-//23070123132
-//entc B2
-//experiment 6
-#include<iostream>
+```
+
+(E)<br> 
+```
+#include <iostream>
 using namespace std;
+
+int main() {
+    int i = 1;
+    while (i <= 5) {
+        int j = 1;
+        while (j <= 5) {
+            cout << "* ";
+            ++j;
+        }
+        cout << endl;
+        ++i;
+    }
+
+    return 0;
+}
+```
+
+(F) <br> 
+```
+#include <iostream>
+using namespace std;
+
 int main() {
     int i = 1;
     do {
         int j = 1;
         do {
-            std::cout << j << " ";
-            j++;
-        } while (j <= 10);
-        i++;
-    } while (i <= 1);
-    std::cout << std::endl;
+            cout << "* ";
+            ++j;
+        } while (j <= 6);
+        cout << endl;
+        ++i;
+    } while (i <= 6);
+
     return 0;
 }
-7. Nested for while
-//subham
-//23070123132
-//entc B2
-//experiment 6
+```
+
+(G)<br> 
+```
+
 #include<iostream>
 using namespace std;
-int main()
-{
+int main(){
     int i,j,k=0,n;
-    cout<<"enter number of rows-";
+    cout<<"Enter number of rows:";
     cin>>n;
     for(i=1;i<=n;i++)
     {
-        for(j=1;j<=(n-i);j++)
+        for (j=1;j<=(n-1);j++)
         {
             cout<<" ";
         }
-        while(k!=(i-1))
+        while(k!=(2*i-1))
         {
             cout<<"* ";
             k++;
         }
         k=0;
-        cout<<endl;
-    }
-    cout<<endl;
-}
-Explanation:-
-Loops allow repetitive execution of code. A for loop iterates over a sequence and is used when the number of iterations is known.
+        }
+        cout<<"end1";
+    
+} 
+```
 
-A while loop runs as long as a condition is true, useful for uncertain iteration counts.
+### Output: <br> 
 
-Nested loops enable complex iteration, such as iterating over multi-dimensional arrays. Each type offers different control and flexibility for managing code flow.
+(A)<br> 
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6A.png)
 
-Output:-
-1. For loop
-Screenshot 2024-08-02 093429
+(B)<br>
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6B.png)
 
-2.*While loop
-Screenshot 2024-08-02 093459
+(C)<br>
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6C.png)
 
-3.Do-While loop
-Screenshot 2024-08-02 093555
+(D)<br>
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6D.png)
 
-4.Nested for loop
-Screenshot 2024-08-02 093612
+(E)<br>
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6E.png)
 
-5.Nested while loop
-Screenshot 2024-08-02 093635
+(F)<br>
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6F.png)
 
-6.Nested do-while loop
-Screenshot 2024-08-02 093658
+(G)<br> 
+![](https://github.com/Shloka-Patel/Experiment---6/blob/main/Output_6(G)%20.png) 
 
-7.Nested for while loop
-Screenshot 2024-08-02 093719
-
-Conclusion:-
-Decision-making statements like if, elif, and else control code execution based on conditions, while loops (for and while) repeat code blocks. Combining these allows dynamic, responsive programming. For example, using if statements within loops enables actions based on conditions during each iteration, efficiently handling varying data and scenarios.
+### Conclusion 
+I learnt about different deciosion making loops of C++ and made programs using those statements like how to print counting numbers or even numbers, till a certain range, matrix operations and many other programs. <br> 
